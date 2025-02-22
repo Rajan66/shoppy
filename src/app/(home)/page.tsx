@@ -1,8 +1,11 @@
+import Button from '@/components/common/Button'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>This is home page</div>
+    <div>
+      <Button>This is my custom button</Button>
+    </div>
   )
 }
 
