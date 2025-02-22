@@ -1,15 +1,21 @@
 import React from "react";
 import Link from "next/link";
 
-import { items } from "./list/items";
+type FooterItemProps = {
+    name: string;
+    url: string;
+};
 
-const FooterItem = () => {
+const FooterItem = ({ items, title }: { items: FooterItemProps[]; title: string }) => {
     return (
-        <div>
-            <ul className="flex gap-4 justify-center items-center">
+        <div className="flex flex-col gap-4 tracking-wide">
+            <h2 className="uppercase font-semibold">{title}</h2>
+            <ul className="flex flex-col gap-2 justify-center text-start items-start">
                 {items.map((item, index) => (
                     <Link href={item.url} key={index}>
-                        <li>{item.name}</li>
+                        <li className="transition duration-300 opacity-80 hover:opacity-100">
+                            {item.name}
+                        </li>
                     </Link>
                 ))}
             </ul>

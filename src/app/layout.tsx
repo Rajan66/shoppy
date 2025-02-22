@@ -13,7 +13,7 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
     title: "Shoppy",
-    description: "A ecommerce app powered by Next.js",
+    description: "A clothing store application powered by Next.js",
 };
 
 export default function RootLayout({

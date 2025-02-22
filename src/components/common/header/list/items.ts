@@ -1,14 +1,26 @@
 export const items = [
     {
-        name: "Home",
-        url: "/",
+        name: "Womens",
+        url: "/womens",
     },
     {
-        name: "Products",
-        url: "/",
+        name: "Mens",
+        url: "/mens",
     },
     {
-        name: "About",
-        url: "/",
+        name: "Universal Fits",
+        url: "/fits",
+    },
+    {
+        name: "Sale",
+        url: "/sale",
+    },
+    {
+        name: "Brands",
+        url: "/brands",
+    },
+    {
+        name: "Trending",
+        url: "/trending",
     },
 ];
