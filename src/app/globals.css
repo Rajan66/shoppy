@@ -23,15 +23,14 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+@layer base {
+    * {
+        @apply font-figtree;
     }
-}
-
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+    body {
+        @apply bg-background text-foreground;
+    }
+    .theme {
+        @apply h-[1.2rem] w-[1.2rem] transition-opacity duration-300 ease-in-out;
+    }
 }
