@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import QueryProvider from "@/providers/QueryProvider";
 
 import "./globals.css";
 
@@ -24,9 +25,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${figtree.variable} antialiased`}>
-                <ThemeProvider attribute="class" defaultTheme="dark">
-                    {children}
-                </ThemeProvider>
+                <QueryProvider>
+                    <ThemeProvider attribute="class" defaultTheme="dark">
+                        {children}
+                    </ThemeProvider>
+                </QueryProvider>
             </body>
         </html>
     );

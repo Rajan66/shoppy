@@ -1,13 +1,16 @@
-import React from "react";
-
+// TODO bad to make the whole page client side
+"use client"
+import { useGetProducts } from "@/hooks/productQueries";
 import Hero from "@/components/home/Hero";
 import Trending from "@/components/home/Trending";
 import SponsorCard from "@/components/home/SponsorCard";
-
-import billie from "@/assets/billie.jpg";
 import ProductCard from "@/components/home/ProductCard";
+import billie from "@/assets/billie.jpg";
 
 const page = () => {
+    const { data, isLoading, error } = useGetProducts();
+    console.log(data);
+
     return (
         <div className="">
             <Hero
