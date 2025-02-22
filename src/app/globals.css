@@ -10,7 +10,9 @@
         --primary-foreground: #000000;
         --secondary: #000000;
         --secondary-foreground: #ffffff;
-        --destructive: #E32636;
+        --destructive: #e32636;
+        --card: #343434;
+        --card-foreground: #ffffff;
     }
     .dark {
         --background: #0a0a0a;
@@ -19,7 +21,9 @@
         --primary-foreground: #ffffff;
         --secondary: #ffffff;
         --secondary-foreground: #000000;
-        --destructive: #E32636;
+        --destructive: #e32636;
+        --card: #faf9f6;
+        --card-foreground: #000000;
     }
 }
 
@@ -32,5 +36,8 @@
     }
     .theme {
         @apply h-[1.2rem] w-[1.2rem] transition-opacity duration-300 ease-in-out;
+    }
+    .section-margin{
+        @apply mx-14 my-6 
     }
 }
