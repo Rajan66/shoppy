@@ -1,10 +1,15 @@
-import Button from "@/components/common/Button";
 import React from "react";
+
+import Hero from "@/components/home/Hero";
+import Trending from "@/components/home/Trending";
 
 const page = () => {
     return (
-        <div className="h-screen">
-            <Button>This is my custom button</Button>
+        <div className="">
+            <Hero />
+            <div className="mx-14">
+                <Trending />
+            </div>
         </div>
     );
 };
