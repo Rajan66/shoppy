@@ -3,15 +3,16 @@ import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-export type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
 const buttonVariants = cva(
     "flex items-center justify-center gap-2 rounded-lg text-base font-medium transition duration-300",
     {
         variants: {
             variant: {
-                default:  "bg-foreground text-background hover:bg-foreground/80" ,
-                primary: "bg-primary text-primary-foreground hover:bg-secondary hover:text-primary",
+                default: "bg-foreground text-background hover:bg-foreground/80",
+                primary:
+                    "bg-primary text-primary-foreground hover:bg-secondary hover:text-primary",
                 secondary: "bg-secondary text-secondary-foreground hover:bg-primary/80",
                 destructive: "bg-destructive text-white hover:bg-destructive/80",
             },
@@ -30,7 +31,7 @@ const buttonVariants = cva(
 );
 
 // Extends base button properties while adding variant and size props
-export interface ButtonProps
+interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement>,
         ButtonVariantProps {}
 
