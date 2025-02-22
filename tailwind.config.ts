@@ -27,6 +27,7 @@ export default {
                 "primary-foreground": "var(--primary-foreground)",
                 secondary: "var(--secondary)",
                 "secondary-foreground": "var(--secondary-foreground)",
+                destructive: "var(--destructive)",
             },
         },
     },

@@ -10,7 +10,7 @@ import ThemeToggle from "../ThemeToggle";
 // TODO create sheet component for mobile and medium screens
 const Navbar = () => {
     return (
-        <header className="bg-foreground text-background p-4 opacity-90 sticky">
+        <header className="bg-foreground text-background p-4 sticky">
             <nav className="flex justify-between items-center mx-14 tracking-wide">
                 <div className="flex gap-10 items-center justify-center">
                     <div className="flex gap-4 items-start justify-center">
