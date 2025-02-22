@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Spectral } from "next/font/google";
+import { Figtree } from "next/font/google";
+
+import { ThemeProvider } from "@/providers/ThemeProvider";
+
 import "./globals.css";
 
-const spectral = Geist({
-    variable: "--font-spectral",
+const figtree = Figtree({
+    variable: "--font-figtree",
     subsets: ["latin"],
+    weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +23,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${spectral.variable} antialiased`}>{children}</body>
+            <body className={`${figtree.variable} antialiased`}>
+                <ThemeProvider attribute="class" defaultTheme="dark">
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     );
 }

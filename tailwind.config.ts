@@ -9,7 +9,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                spectral: "var(--font-spectral)",
+                figtree: "var(--font-figtree)",
             },
             screens: {
                 xs: "480px",
