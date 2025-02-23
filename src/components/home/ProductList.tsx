@@ -13,7 +13,7 @@ const ProductList = () => {
         return <Loading />;
     }
 
-    if (error?.message === "Network Error") {
+    if (error) {
         return (
             <div className="section-margin grid grid-cols-4 gap-6">
                 {Array.from({ length: 4 }).map((_, index) => (
