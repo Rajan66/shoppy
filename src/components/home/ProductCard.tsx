@@ -3,32 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Card, CardContent, CardDescription, CardHeader } from "../common/Card";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+import billie from "@/assets/billie.jpg";
 
 type ProductCardProps = {
-    image: string | StaticImport;
+    image?: string;
     title: string;
-    description: string;
+    category: string;
     price: number;
 };
 
-const ProductCard = ({ title, description, price, image }: ProductCardProps) => {
+const ProductCard = ({ title, category, price, image }: ProductCardProps) => {
     return (
         <Link href={"/shop"} className="flex">
             <Card>
                 <CardHeader className="p-0">
-                    <Image
-                        src={image}
-                        width={400}
-                        height={600}
-                        alt="model"
-                        className="w-full h-full"
-                    />
+                    <Image src={image ?? billie} width={500} height={500} alt="model" />
                 </CardHeader>
-                <CardContent className="flex flex-col items-start px-4 uppercase text-sm tracking-wider">
+                <CardContent className="flex flex-col gap-1 items-start px-4 uppercase text-sm tracking-wider">
+                    <CardDescription className="text-xs">{category}</CardDescription>
                     <CardDescription>{title}</CardDescription>
-                    <CardDescription>{description}</CardDescription>
-                    <CardDescription>{`$${price}`}</CardDescription>
+                    <CardDescription>{`$${price.toFixed(2)}`}</CardDescription>
                 </CardContent>
             </Card>
         </Link>

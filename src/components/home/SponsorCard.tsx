@@ -15,48 +15,24 @@ type SponsorCardProps = {
 
 const SponsorCard = ({ title, description, image, buttonTitle }: SponsorCardProps) => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 section-margin gap-4">
-            <Link href={"/shop"} className="flex">
-                <Card className="w-full h-[800px]">
-                    <CardHeader className="relative p-0 h-full">
-                        <Image
-                            src={image}
-                            width={400}
-                            height={600}
-                            alt="model"
-                            className="w-full h-full object-cover"
-                        />
-                        <CardDescription className="absolute bottom-4 flex flex-col items-start text-white px-4 gap-2">
-                            <h2 className="text-3xl font-bold uppercase">{title}</h2>
-                            <p className="text-base font-semibold uppercase">
-                                {description}
-                            </p>
-                            <p className="uppercase tracking-wide">{buttonTitle}</p>
-                        </CardDescription>
-                    </CardHeader>
-                </Card>
-            </Link>
-            <Link href={"/shop"} className="flex">
-                <Card className="w-full h-[800px]">
-                    <CardHeader className="relative p-0 h-full">
-                        <Image
-                            src={image}
-                            width={400}
-                            height={600}
-                            alt="model"
-                            className="w-full h-full object-cover"
-                        />
-                        <CardDescription className="absolute bottom-4 flex flex-col items-start text-white px-4 gap-2">
-                            <h2 className="text-3xl font-bold uppercase">{title}</h2>
-                            <p className="text-base font-semibold uppercase">
-                                {description}
-                            </p>
-                            <p className="uppercase tracking-wide">{buttonTitle}</p>
-                        </CardDescription>
-                    </CardHeader>
-                </Card>
-            </Link>
-        </div>
+        <Link href={"/shop"} className="flex">
+            <Card className="w-full h-[800px]">
+                <CardHeader className="relative p-0 h-full">
+                    <Image
+                        src={image}
+                        width={1000}
+                        height={600}
+                        alt="model"
+                        className="w-full h-full object-cover"
+                    />
+                    <CardDescription className="absolute bottom-4 flex flex-col items-start text-white px-4 gap-2">
+                        <h2 className="text-3xl font-bold uppercase">{title}</h2>
+                        <p className="text-base font-semibold uppercase">{description}</p>
+                        <p className="uppercase tracking-wide">{buttonTitle}</p>
+                    </CardDescription>
+                </CardHeader>
+            </Card>
+        </Link>
     );
 };
 
