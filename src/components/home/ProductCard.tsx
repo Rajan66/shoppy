@@ -13,7 +13,12 @@ type ProductCardProps = {
     price: number;
 };
 
-const ProductCard = ({ title, category, price, image }: ProductCardProps) => {
+const ProductCard = ({
+    title = "Billie Ellish Oversized Tee",
+    category = "Graphic Tees",
+    price = 70,
+    image,
+}: ProductCardProps) => {
     return (
         <Link href={"/shop"} className="flex">
             <Card>

@@ -26,7 +26,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${figtree.variable} antialiased`}>
                 <QueryProvider>
-                    <ThemeProvider attribute="class" defaultTheme="dark">
+                    <ThemeProvider attribute="class" defaultTheme="light">
                         {children}
                     </ThemeProvider>
                 </QueryProvider>
