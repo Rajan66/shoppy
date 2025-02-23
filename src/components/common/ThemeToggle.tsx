@@ -5,7 +5,7 @@ import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ThemeToggle = () => {
-    const { theme, setTheme, resolvedTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
 
     if (resolvedTheme === undefined) {
         return <Sun className="theme" />;
