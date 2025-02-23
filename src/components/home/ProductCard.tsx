@@ -8,9 +8,9 @@ import billie from "@/assets/billie.jpg";
 
 type ProductCardProps = {
     image?: string;
-    title: string;
-    category: string;
-    price: number;
+    title?: string;
+    category?: string;
+    price?: number;
 };
 
 const ProductCard = ({
