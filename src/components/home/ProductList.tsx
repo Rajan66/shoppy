@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
-import ProductCard from "./ProductCard";
 import { useGetProducts } from "@/hooks/productQueries";
 import { Product } from "@/types";
+import ProductCard from "./ProductCard";
 import Loading from "../common/Loading";
 
 const ProductList = () => {
     const { data: products, isLoading, error } = useGetProducts();
 
-    console.log(error);
     if (isLoading) {
         return <Loading />;
     }

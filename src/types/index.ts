@@ -8,6 +8,13 @@ export type Product = {
     imageUrl: string;
 };
 
+export type Category = {
+    id: number;
+    title: string;
+    image: string;
+    imageUrl: string;
+};
+
 export type Cart = {
     id: number;
     userId: number;

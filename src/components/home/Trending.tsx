@@ -1,14 +1,27 @@
-import React from "react";
+"use client";
+import { Category } from "@/types";
+import { useGetCategories } from "@/hooks/categoryQueries";
 
 import Button from "../common/Button";
 import TrendingCard from "./TrendingCard";
-
-import tees from "@/assets/tees.jpg";
-import shirts from "@/assets/shirts.jpg";
-import jorts from "@/assets/jorts.jpg";
-import shorts from "@/assets/shorts.jpg";
+import Loading from "../common/Loading";
 
 const Trending = () => {
+    const { data: categories, isLoading, error } = useGetCategories();
+
+    if (isLoading) {
+        return <Loading />;
+    }
+
+    if (error) {
+        return (
+            <div className="section-margin grid grid-cols-4 gap-6">
+                {Array.from({ length: 4 }).map((_, index) => (
+                    <TrendingCard key={index} />
+                ))}
+            </div>
+        );
+    }
     return (
         <div className="section-margin">
             <div className="flex justify-between">
@@ -33,10 +46,13 @@ const Trending = () => {
                 </div>
             </div>
             <div className="grid grid-cols-2 xl:grid-cols-4 mt-4 gap-6">
-                <TrendingCard title="tees" image={tees} />
-                <TrendingCard title="jorts" image={shirts} />
-                <TrendingCard title="shirts" image={jorts} />
-                <TrendingCard title="shorts" image={shorts} />
+                {categories.items.map((category: Category, index: number) => (
+                    <TrendingCard
+                        key={index}
+                        title={category.title}
+                        imageUrl={category.imageUrl}
+                    />
+                ))}
             </div>
         </div>
     );
