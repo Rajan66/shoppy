@@ -27,9 +27,10 @@ const ProductList = () => {
             {products?.items?.slice(0, 4).map((product: Product, index: number) => (
                 <ProductCard
                     key={index}
+                    id={product.id}
                     title={product.title}
                     category={product.category}
-                    image={product.imageUrl}
+                    imageUrl={product.imageUrl}
                     price={product.price}
                 />
             ))}

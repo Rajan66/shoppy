@@ -12,7 +12,7 @@ type TrendingCardProps = {
     title?: string;
 };
 
-const TrendingCard = ({ imageUrl = tee, title }: TrendingCardProps) => {
+const TrendingCard = ({ imageUrl = tee, title = "Tees" }: TrendingCardProps) => {
     return (
         <Link href={"/shop"} className="flex">
             <Card className="w-[430px] h-[600px]">

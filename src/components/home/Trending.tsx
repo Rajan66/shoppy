@@ -46,7 +46,7 @@ const Trending = () => {
                 </div>
             </div>
             <div className="grid grid-cols-2 xl:grid-cols-4 mt-4 gap-6">
-                {categories.items.map((category: Category, index: number) => (
+                {categories?.items?.map((category: Category, index: number) => (
                     <TrendingCard
                         key={index}
                         title={category.title}
