@@ -5,14 +5,14 @@ import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ThemeToggle = () => {
-    const { setTheme, resolvedTheme } = useTheme();
+    const { theme, setTheme } = useTheme();
 
-    if (resolvedTheme === undefined) {
+    if (theme === undefined) {
         return <Sun className="theme" />;
     }
 
     const toggleTheme = () => {
-        const newTheme = resolvedTheme === "light" ? "dark" : "light";
+        const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
     };
 
@@ -21,10 +21,8 @@ const ThemeToggle = () => {
             onClick={toggleTheme}
             className="relative flex items-center justify-center"
         >
-            <Sun className={cn("theme", resolvedTheme === "dark" ? "block" : "hidden")} />
-            <Moon
-                className={cn("theme", resolvedTheme === "light" ? "block" : "hidden")}
-            />
+            <Sun className={cn("theme", theme === "dark" ? "block" : "hidden")} />
+            <Moon className={cn("theme", theme === "light" ? "block" : "hidden")} />
             <span className="sr-only">Toggle theme</span>
         </button>
     );

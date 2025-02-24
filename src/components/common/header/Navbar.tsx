@@ -1,15 +1,14 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import { SearchIcon, UserIcon } from "lucide-react";
 
 import NavItems from "./NavItems";
 import ThemeToggle from "../ThemeToggle";
+import CartIcon from "./CartIcon";
 
 import logo from "@/app/favicon.ico";
-import CartIcon from "./CartIcon";
-import Link from "next/link";
 
-// TODO create sheet component for mobile and medium screens
 const Navbar = () => {
     return (
         <header className="bg-foreground text-background p-4 sticky">
