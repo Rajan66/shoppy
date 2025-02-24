@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Card, CardContent, CardDescription, CardHeader } from "../common/Card";
-import AddCart from "../common/cart/AddCart";
+import AddCart from "../cart/AddCart";
 
 import billie from "@/assets/billie.jpg";
 

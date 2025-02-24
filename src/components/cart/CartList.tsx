@@ -4,13 +4,22 @@ import Image from "next/image";
 import { Minus, PlusIcon } from "lucide-react";
 
 import { useCartStore } from "@/hooks/store";
-import DeleteCart from "@/components/common/cart/DeleteCart";
-import { Card, CardContent, CardDescription } from "../Card";
+import DeleteCart from "@/components/cart/DeleteCart";
+import { Card, CardContent, CardDescription } from "../common/Card";
 
 import billie from "@/assets/billie.jpg";
 
 const CartList = () => {
     const { items } = useCartStore();
+
+    if (!items || items.length === 0) {
+        return (
+            <div className="flex items-center justify-center mt-10">
+                <h2 className="text-2xl text-destructive">Cart is empty...</h2>
+            </div>
+        );
+    }
+
     return (
         <div>
             {items.map((item, index) => (

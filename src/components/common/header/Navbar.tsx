@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { SearchIcon, ShoppingBag, UserIcon } from "lucide-react";
+import { SearchIcon, UserIcon } from "lucide-react";
 
 import NavItems from "./NavItems";
 import ThemeToggle from "../ThemeToggle";

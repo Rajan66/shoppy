@@ -1,4 +1,4 @@
-import CartList from "@/components/common/cart/CartList";
+import CartList from "@/components/cart/CartList";
 import { ShoppingBag } from "lucide-react";
 
 const page = () => {
