@@ -11,7 +11,7 @@ import logo from "@/app/favicon.ico";
 
 const Navbar = () => {
     return (
-        <header className="bg-foreground text-background p-4 sticky">
+        <header className="bg-foreground text-background p-4 sticky top-0 z-50">
             <nav className="flex justify-between items-center mx-14 tracking-wide">
                 <div className="flex gap-10 items-center justify-center">
                     <Link href={"/"} className="flex gap-4 items-start justify-center">
