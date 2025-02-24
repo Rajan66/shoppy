@@ -16,7 +16,7 @@ const ProductList = () => {
         return (
             <div className="section-margin grid grid-cols-4 gap-6">
                 {Array.from({ length: 4 }).map((_, index) => (
-                    <ProductCard key={index} />
+                    <ProductCard key={index}/>
                 ))}
             </div>
         );

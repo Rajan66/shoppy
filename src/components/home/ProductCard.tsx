@@ -39,7 +39,13 @@ const ProductCard = ({
                     <CardDescription>{title}</CardDescription>
                     <CardDescription>{`$${price.toFixed(2)}`}</CardDescription>
                 </div>
-                <AddCart productId={id} />
+                <AddCart
+                    productId={id}
+                    title={title}
+                    category={category}
+                    price={price}
+                    imageUrl={imageUrl}
+                />
             </CardContent>
         </Card>
     );
