@@ -1,10 +1,12 @@
+import { Product } from "@/types";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
 type Cart = {
     count: number;
-    items: string[];
-    addItem: (id: string) => void;
+    cartId: string;
+    items: (Product | undefined)[];
+    addItem: (item: Product, cartId: string) => void;
     removeItem: (id: string) => void;
 };
 
@@ -12,16 +14,24 @@ export const useCartStore = create<Cart>()(
     persist(
         (set, get) => ({
             count: 0,
+            cartId: "",
             items: [],
-            addItem: (id: string) => {
-                // check if the id already exists
-                if (!get().items.includes(id)) {
-                    set({ items: [...get().items, id], count: get().count + 1 });
+            addItem: (item: Product, cartId: string) => {
+                const existingItem = get().items.find(
+                    (existingItem) => existingItem?.id === item.id
+                );
+
+                if (!existingItem) {
+                    set({
+                        items: [...get().items, item],
+                        count: get().count + 1,
+                        cartId: cartId,
+                    });
                 }
             },
             removeItem: (id: string) => {
                 set({
-                    items: get().items.filter((itemId) => itemId !== id),
+                    items: get().items.filter((item) => item?.id !== id),
                     count: get().count - 1,
                 });
             },
