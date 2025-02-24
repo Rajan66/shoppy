@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import ProductCard from "./ProductCard";
-import { useGetProducts } from "@/hooks/productQueries";
+
 import { Product } from "@/types";
+import { useGetProducts } from "@/hooks/productQueries";
+import ProductCard from "./ProductCard";
 import Loading from "../common/Loading";
 
 const ProductList = () => {

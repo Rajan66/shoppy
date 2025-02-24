@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 import Button from "../common/Button";
 import { cn } from "@/lib/utils";
 
