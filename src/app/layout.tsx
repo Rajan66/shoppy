@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 
+import { ToastContainer } from "react-toastify";
+
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import QueryProvider from "@/providers/QueryProvider";
 
@@ -27,6 +29,7 @@ export default function RootLayout({
             <body className={`${figtree.variable} antialiased`}>
                 <QueryProvider>
                     <ThemeProvider attribute="class" defaultTheme="light">
+                        <ToastContainer />
                         {children}
                     </ThemeProvider>
                 </QueryProvider>
