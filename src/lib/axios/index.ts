@@ -14,6 +14,10 @@ export const PutRequest = (url: string, data?: any, config: AxiosRequestConfig =
     return axios.put(url, data, config);
 };
 
+export const PatchRequest = (url: string, data?: any, config: AxiosRequestConfig = {}) => {
+    return axios.patch(url, data, config);
+};
+
 export const DeleteRequest = (url: string, config: AxiosRequestConfig = {}) => {
     return axios.delete(url, config);
 };

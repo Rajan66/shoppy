@@ -37,7 +37,10 @@
     .theme {
         @apply h-[1.2rem] w-[1.2rem] transition-opacity duration-300 ease-in-out;
     }
-    .section-margin{
-        @apply mx-14 my-6 
+    .section-margin {
+        @apply mx-14 my-6;
+    }
+    .cart-count {
+        @apply absolute bottom-0 -right-1 flex justify-center items-center w-4 h-4 bg-destructive text-white rounded-full text-xs;
     }
 }

@@ -1,22 +1,22 @@
 export type Product = {
-    id: number;
+    id: string;
     title: string;
     price: number;
     category: string;
-    description: string;
-    image: string;
+    description?: string;
+    image?: string;
     imageUrl: string;
 };
 
 export type Category = {
-    id: number;
+    id: string;
     title: string;
     image: string;
     imageUrl: string;
 };
 
 export type Cart = {
-    id: number;
+    id: string;
     userId: number;
     date: Date;
     products: Product[];
