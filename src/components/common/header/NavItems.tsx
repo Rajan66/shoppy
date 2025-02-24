@@ -6,7 +6,6 @@ import { items } from "./list/items";
 const NavItems = () => {
     return (
         <div>
-            {/* TODO add on hover color change stuff */}
             <ul className="flex gap-6 justify-center items-center">
                 {items.map((item, index) => (
                     <Link href={item.url} key={index}>
