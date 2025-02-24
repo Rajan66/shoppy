@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 import { SearchIcon, ShoppingBag, UserIcon } from "lucide-react";
@@ -7,6 +6,7 @@ import NavItems from "./NavItems";
 import ThemeToggle from "../ThemeToggle";
 
 import logo from "@/app/favicon.ico";
+import CartIcon from "./CartIcon";
 
 // TODO create sheet component for mobile and medium screens
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <div className="flex gap-4 items-center">
                     <SearchIcon />
                     <ThemeToggle />
-                    <ShoppingBag />
+                    <CartIcon />
                     <UserIcon />
                 </div>
             </nav>
