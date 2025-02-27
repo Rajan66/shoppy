@@ -11,7 +11,7 @@ const page = () => {
                 <h2 className="mx-4 my-6 md:section-margin text-4xl font-semibold uppercase opacity-80">
                     You may also like
                 </h2>
-                <ProductList />
+                <ProductList flag={true} />
             </div>
         </div>
     );

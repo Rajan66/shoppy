@@ -38,7 +38,7 @@ const Hero = ({
                     {description}
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-4">
-                    <Link href="/shop">
+                    <Link href="/product">
                         <Button
                             variant="default"
                             size="lg"

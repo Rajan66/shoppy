@@ -39,7 +39,7 @@ const page = () => {
                     buttonTitle="Shop Mens"
                 />
             </div>
-            <ProductList />
+            <ProductList flag={true} />
         </div>
     );
 };
