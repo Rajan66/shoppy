@@ -30,7 +30,7 @@ const ProductList = () => {
     }
 
     return (
-        <div className="section-margin grid grid-cols-4 gap-6">
+        <div className="mx-4 my-6 md:section-margin grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6">
             {products?.slice(0, 4).map((product: Product, index: number) => (
                 <ProductCard
                     key={index}
