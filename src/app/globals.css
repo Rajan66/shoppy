@@ -43,4 +43,7 @@
     .cart-count {
         @apply absolute bottom-0 -right-1 flex justify-center items-center w-4 h-4 bg-destructive text-white rounded-full text-xs;
     }
+    .skeleton {
+        @apply rounded-xl text-gray-200 bg-gray-200;
+    }
 }

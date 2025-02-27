@@ -1,7 +1,7 @@
 import Hero from "@/components/home/Hero";
 import Trending from "@/components/home/Trending";
 import SponsorCard from "@/components/home/SponsorCard";
-import ProductList from "@/components/home/ProductList";
+import ProductList from "@/components/home/product/ProductList";
 
 import billie from "@/assets/billie.jpg";
 import party from "@/assets/party.jpg";
