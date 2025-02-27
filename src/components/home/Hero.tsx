@@ -24,17 +24,19 @@ const Hero = ({
     return (
         <section
             className={cn(
-                " relative w-full flex flex-col justify-center items-center text-center bg-gray-900 text-white",
+                "relative w-full flex flex-col justify-center items-center text-center bg-gray-900 text-white",
                 flag ? "h-[500px]" : "h-screen"
             )}
         >
             <div
-                className={`absolute inset-0 bg-cover opacity-50 `}
+                className={`absolute inset-0 bg-cover  opacity-50 `}
                 style={{ backgroundImage: `url(${imageUrl})` }}
             ></div>
-            <div className="relative z-10 max-w-3xl px-6">
-                <h1 className="text-5xl font-bold md:text-6xl">{title}</h1>
-                <p className="mt-4 text-lg md:text-xl text-gray-300">{description}</p>
+            <div className="relative z-10 max-w-3xl px-6 w-full">
+                <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">{title}</h1>
+                <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-300">
+                    {description}
+                </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-4">
                     <Link href="/shop">
                         <Button
