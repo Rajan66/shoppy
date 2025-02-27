@@ -13,24 +13,29 @@ const ProductDetailCard = () => {
     const { data: product, isLoading, error } = useGetProduct(id?.toString());
 
     if (isLoading) return <ProductDetailSkeletonCard />;
+    if (error)
+        return (
+            <div className="flex justify-center items-center text-3xl text-destructive">
+                Something went wrong!
+            </div>
+        );
     return (
-        <Card>
-            <CardContent className="flex gap-4 justify-start items-start">
+        <Card className="border-0 shadow-none">
+            <CardContent className="flex flex-col gap-4 justify-center items-center lg:items-start lg:flex-row ">
                 <CardHeader>
                     <Image
                         src={product?.imageUrl ?? "/thrills.jpg"}
                         height={600}
-                        width={600}
+                        width={500}
                         alt="detail image"
-                        className="h-[450px] object-center"
                     />
                 </CardHeader>
-                <CardContent className="flex flex-col justify-center items-start w-1/2 gap-4">
-                    <CardDescription className="text-lg">
+                <CardContent className="flex flex-col justify-center items-start gap-4 lg:w-1/2">
+                    <CardDescription className="text-lg uppercase tracking-wider">
                         {product?.category}
                     </CardDescription>
 
-                    <CardDescription className="text-2xl font-semibold">
+                    <CardDescription className="text-2xl font-semibold uppercase tracking-wider">
                         {product?.title}
                     </CardDescription>
 
@@ -40,7 +45,7 @@ const ProductDetailCard = () => {
 
                     <CardContent className="p-0 flex justify-between w-full">
                         <CardDescription className="text-lg">
-                            ${product?.price?.toFixed(2)}
+                            ${Number(product?.price).toFixed(2)}
                         </CardDescription>
                         <AddCart
                             productId={product?.id}

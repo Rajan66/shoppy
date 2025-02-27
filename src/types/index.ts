@@ -12,6 +12,7 @@ export type Category = {
     id: string;
     title: string;
     image: string;
+    gender: string;
     imageUrl: string;
 };
 

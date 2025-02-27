@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 
 import { Minus, PlusIcon } from "lucide-react";
@@ -12,6 +13,7 @@ import billie from "@/assets/billie.jpg";
 
 const CartList = () => {
     const { items } = useCartStore();
+    const [count, setCount] = useState(1);
 
     if (!items || items.length === 0) {
         return (
@@ -44,16 +46,29 @@ const CartList = () => {
                             </div>
                             <div>
                                 <CardDescription className="flex gap-3 border justify-center cursor-pointer">
-                                    <Minus className="border-r" />
-                                    <p>1</p>
-                                    <PlusIcon className="border-l" />
+                                    <Minus
+                                        className="border-r"
+                                        onClick={() => {
+                                            if (count > 0) {
+                                                setCount((count) => {
+                                                    return count - 1;
+                                                });
+                                            }
+                                        }}
+                                    />
+                                    <p>{count.toString()}</p>
+                                    <PlusIcon
+                                        className="border-l"
+                                        onClick={() => setCount((count) => count + 1)}
+                                    />
                                 </CardDescription>
                             </div>
                         </CardContent>
                     </Card>
                 ))}
             </div>
-            <Button className="w-full">Checkout</Button>
+
+            <Button className="w-full mb-32">Checkout</Button>
         </div>
     );
 };
