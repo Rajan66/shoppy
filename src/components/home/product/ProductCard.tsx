@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Card, CardContent, CardDescription, CardHeader } from "../common/Card";
-import AddCart from "../cart/AddCart";
-
+import { Card, CardContent, CardDescription, CardHeader } from "../../common/Card";
+import AddCart from "../../cart/AddCart";
 
 type ProductCardProps = {
     id?: string;
@@ -25,7 +24,7 @@ const ProductCard = ({
             <CardHeader className="p-0">
                 <Link href={`/product/${id}`}>
                     <Image
-                        src={imageUrl ?? '/thrills.jpg'}
+                        src={imageUrl ?? "/thrills.jpg"}
                         width={500}
                         height={500}
                         alt="model"

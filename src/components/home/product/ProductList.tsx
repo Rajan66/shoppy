@@ -3,7 +3,7 @@ import React from "react";
 import { useGetProducts } from "@/hooks/productQueries";
 import { Product } from "@/types";
 import ProductCard from "./ProductCard";
-import ProductCardSkeleton from "./skeleton/ProductCardSkeleton";
+import ProductCardSkeleton from "../skeleton/ProductCardSkeleton";
 
 const ProductList = () => {
     const { data: products, isLoading, error } = useGetProducts();
