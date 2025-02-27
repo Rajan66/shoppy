@@ -25,7 +25,7 @@ const page = () => {
                 flag={true}
             />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 section-margin gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 mx-4 my-6 md:section-margin gap-4">
                 <SponsorCard
                     title="Graphic Tees"
                     image={billie}
