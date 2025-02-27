@@ -35,7 +35,7 @@ const AddCart = ({ productId, title, category, imageUrl, price }: CartProductPro
                 // cart exist => update existing cart
                 const productIds = items.map((item) => item?.id);
                 const updatePayload = {
-                    userId: 1,
+                    user_id: 1,
                     products: [...productIds, productId],
                 };
                 queryClient.invalidateQueries({ queryKey: ["carts"] });
@@ -49,7 +49,8 @@ const AddCart = ({ productId, title, category, imageUrl, price }: CartProductPro
 
     // when response promise completes add the item to the cart
     useEffect(() => {
-        if (response?.statusText === "OK" && response.data?.id) {
+        console.log(response);
+        if ((response?.status === 201 && response.data?.id) || response?.status === 200) {
             toast.success("Item added to cart");
             const product = {
                 id: productId || "",
@@ -68,7 +69,7 @@ const AddCart = ({ productId, title, category, imageUrl, price }: CartProductPro
             return;
         }
         const payload = {
-            userId: 1,
+            user_id: 1,
             products: [productId],
         };
         mutate(payload);
