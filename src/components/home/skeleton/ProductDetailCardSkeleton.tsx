@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader } from "@/components/com
 
 const ProductDetailSkeletonCard = () => {
     return (
-        <Card>
-            <CardContent className="flex gap-4 justify-center items-start">
+        <Card className="border-0 shadow-none">
+            <CardContent className="flex flex-col gap-4 justify-center items-center lg:items-start lg:flex-row ">
                 <CardHeader>
                     <Image
                         src={"/thrills.jpg"}
@@ -15,7 +15,7 @@ const ProductDetailSkeletonCard = () => {
                         alt="detail image"
                     />
                 </CardHeader>
-                <CardContent className="flex flex-col justify-center items-start w-1/2 gap-4">
+                <CardContent className="flex flex-col justify-center items-start gap-4 lg:w-1/2">
                     <CardDescription className="text-lg uppercase tracking-wider skeleton">
                         Category
                     </CardDescription>
@@ -33,7 +33,7 @@ const ProductDetailSkeletonCard = () => {
                         </CardDescription>
                         <ShoppingCartIcon className="cursor-pointer opacity-50" />
                     </CardContent>
-                <Button className="w-full">Checkout</Button>
+                    <Button className="w-full">Checkout</Button>
                 </CardContent>
             </CardContent>
         </Card>
