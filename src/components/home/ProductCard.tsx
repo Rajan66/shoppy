@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader } from "../common/Card";
 import AddCart from "../cart/AddCart";
 
-import billie from "@/assets/billie.jpg";
 
 type ProductCardProps = {
     id?: string;
@@ -26,7 +25,7 @@ const ProductCard = ({
             <CardHeader className="p-0">
                 <Link href={`/product/${id}`}>
                     <Image
-                        src={imageUrl ?? billie}
+                        src={imageUrl ?? '/thrills.jpg'}
                         width={500}
                         height={500}
                         alt="model"

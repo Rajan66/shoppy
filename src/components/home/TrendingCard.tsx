@@ -5,20 +5,19 @@ import Link from "next/link";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 import { Card, CardDescription, CardHeader } from "../common/Card";
-import tee from "@/assets/tees.jpg";
 
 type TrendingCardProps = {
     imageUrl?: string | StaticImport;
     title?: string;
 };
 
-const TrendingCard = ({ imageUrl = tee, title = "Tees" }: TrendingCardProps) => {
+const TrendingCard = ({ imageUrl, title = "Tees" }: TrendingCardProps) => {
     return (
         <Link href={"/shop"} className="flex">
             <Card className="w-[430px] h-[600px]">
                 <CardHeader className="relative p-0 h-full">
                     <Image
-                        src={imageUrl}
+                        src={imageUrl ?? "/tees.jpg"}
                         width={400}
                         height={600}
                         alt="model"

@@ -4,13 +4,19 @@ import { useGetCategories } from "@/hooks/categoryQueries";
 
 import Button from "../common/Button";
 import TrendingCard from "./TrendingCard";
-import Loading from "../common/Loading";
+import TrendingCardSkeleton from "./skeleton/TrendingCardSkeleton";
 
 const Trending = () => {
     const { data: categories, isLoading, error } = useGetCategories();
 
     if (isLoading) {
-        return <Loading />;
+        return (
+            <div className="section-margin grid grid-cols-4 gap-6">
+                {Array.from({ length: 4 }).map((_, index) => (
+                    <TrendingCardSkeleton key={index} />
+                ))}
+            </div>
+        );
     }
 
     if (error) {
