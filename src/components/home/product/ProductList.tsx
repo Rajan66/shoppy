@@ -11,7 +11,7 @@ const ProductList = () => {
 
     if (isLoading) {
         return (
-            <div className="section-margin grid grid-cols-4 gap-6">
+            <div className="mx-4 my-6 md:section-margin grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6">
                 {Array.from({ length: 4 }).map((_, index) => (
                     <ProductCardSkeleton key={index} />
                 ))}
@@ -21,7 +21,7 @@ const ProductList = () => {
 
     if (error) {
         return (
-            <div className="section-margin grid grid-cols-4 gap-6">
+            <div className="mx-4 my-6 md:section-margin grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6">
                 {Array.from({ length: 4 }).map((_, index) => (
                     <ProductCard key={index} />
                 ))}
