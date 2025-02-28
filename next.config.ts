@@ -11,6 +11,10 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "shoppy-server-1.onrender.com",
             },
+            {
+                protocol: "https",
+                hostname: "igris06.pythonanywhere.com",
+            },
         ],
     },
 };
