@@ -15,7 +15,7 @@ type SponsorCardProps = {
 
 const SponsorCard = ({ title, description, image, buttonTitle }: SponsorCardProps) => {
     return (
-        <Link href={"/shop"} className="flex">
+        <Link href={"/product"} className="flex">
             <Card className="w-full h-[800px]">
                 <CardHeader className="relative p-0 h-full">
                     <Image

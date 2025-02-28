@@ -16,7 +16,7 @@ const TrendingCategory = ({ setGenderFilter, genderFilter }: TrendingCategoryPro
                 <Button
                     variant={genderFilter === "Mens" ? "secondary" : "primary"}
                     size="xl"
-                    className="text-base rounded-none uppercase"
+                    className="text-base border border-secondary rounded-none uppercase"
                     onClick={() => setGenderFilter("Mens")}
                 >
                     Mens
